@@ -1,7 +1,7 @@
 const countdown = document.getElementById("countdown");
 
-// Update event date to 5 days from today (May 29, 2025)
-const eventDate = new Date("2025-06-03T00:00:00").getTime();
+// Always set eventDate to 5 days from now
+const eventDate = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).getTime();
 
 const interval = setInterval(() => {
   const now = new Date().getTime();
@@ -19,3 +19,25 @@ const interval = setInterval(() => {
     countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 }, 1000);
+
+// Mobile tap-to-toggle for creator images
+document.querySelectorAll('.creator-card').forEach(card => {
+  card.addEventListener('touchend', function (e) {
+    // Prevent also triggering click events
+    e.preventDefault();
+    const defaultImg = card.querySelector('.default-image');
+    const hoverImg = card.querySelector('.hover-image');
+    if (defaultImg && hoverImg) {
+      const isDefaultVisible = window.getComputedStyle(defaultImg).opacity !== "0";
+      if (isDefaultVisible) {
+        defaultImg.style.opacity = "0";
+        hoverImg.style.opacity = "1";
+        hoverImg.style.transform = "scale(1.08)";
+      } else {
+        defaultImg.style.opacity = "1";
+        hoverImg.style.opacity = "0";
+        hoverImg.style.transform = "scale(1)";
+      }
+    }
+  });
+});
