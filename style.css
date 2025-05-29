@@ -311,5 +311,138 @@ footer {
   text-shadow: 0 2px 8px #000;
 }
 
+/* --- MOBILE-ONLY OVERRIDES --- */
+@media (max-width: 600px) {
+  html, body {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .overlay {
+    padding: 18px 6px;
+    height: auto;
+    min-height: 100vh;
+    box-shadow: none;
+    background: rgba(0,0,0,0.92);
+  }
+
+  .overlay h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 8px #e60023, 0 2px 8px #000;
+  }
+
+  #countdown {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+
+  .overlay p, .cta-button, .about-experience p {
+    font-size: 1rem;
+    max-width: 98vw;
+    margin: 0.7rem auto;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.05rem;
+    margin: 12px 0;
+    border-radius: 30px;
+  }
+
+  .creators {
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+  }
+
+  .creators h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.04em;
+  }
+
+  .creator-carousel {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    box-shadow: none;
+    background: none;
+    overflow-x: visible;
+  }
+
+  .creator-card {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .image-container {
+    height: auto;
+    min-height: 180px;
+    max-height: 220px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .creator-overlay h3 {
+    font-size: 1.05rem;
+    padding: 0.2rem 0;
+  }
+
+  .about-experience {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .about-experience h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.04em;
+  }
+
+  .how-it-works {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 0;
+  }
+
+  .step {
+    padding: 1rem 0.7rem;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.04em;
+  }
+
+  .step p {
+    font-size: 0.97rem;
+  }
+
+  footer {
+    font-size: 0.95rem;
+    padding: 0.8rem 0 0.6rem 0;
+    border-radius: 0;
+  }
+
+  .background-grid {
+    display: none;
+  }
+}
+
 
 
